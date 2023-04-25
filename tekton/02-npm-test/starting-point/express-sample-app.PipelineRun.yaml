@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: express-sample-app-
+spec:
+  params:
+  - name: source-repo
+    value: https://github.com/<your-account>/express-sample-app
+  pipelineRef:
+    name: nodejs
+  workspaces:
+  - name: pipeline-shared-data
+    volumeClaimTemplate:
+      spec:
+        resources:
+          requests:
+            storage: 1Gi
+        accessModes:
+        - ReadWriteOnce

@@ -1,0 +1,89 @@
+# IBM Cloud Garage Learning Standards
+
+By the end of this course you should be able to demonstrate the following skills:
+
+- Basics
+  - Personal Computing Skills
+    - Installing applications
+    - [Computer Setup](https://github.com/upslopeio/ibm-cloud-garage-training/tree/main/computer-setup/apac-emea/README.md)
+  - VSCode
+    - Install with command line tools
+    - LiveShare - both host and guest
+  - Command Line Interface (CLI)
+    - Change directories (up, down)
+    - Describe how `PATH` works
+    - Change `PATH` in `.zshrc`
+    - Determine if an executable is in `PATH` with `which`
+    - Print the working directory
+    - List the contents of a directory
+    - Move and copy files
+    - Navigate history using arrow keys and history command
+    - Clear the screen using both `clear` and `CMD+K`
+    - Create and edit a file at the command line using `touch` and `vim`
+  - Git
+    - Explain the add/commit/push flow including untracked files
+    - Add / commit / pull / push changes
+    - Create a repo locally and push it to a remote
+    - Set config for your username / email, ignorecase...
+    - Create branches, make commits on branches and push code to branches
+    - Create pull requests and merge pull requests
+    - Clone a GitHub Repository
+    - Restore files you don't want to commit
+    - Resolve merge conflicts visually in VSCode
+- Application Development
+  - TDD
+    - Describe red-green-refactor
+- Devops
+  - Docker
+    - Define image and container
+    - Run a container in the foreground, mapping ports
+    - List images and containers
+    - Show running containers
+    - Pull and push images to quay.io
+    - Create a Dockerfile containing `nginx` and build it
+  - Kubernetes (K8s)
+    - Define Object in K8s
+    - Describe one use case for Pods
+    - Describe K8s including things like etcd and the control plane
+    - Use the command line to debug an application using `get`, `describe`, `logs`, etc.
+    - Describe the role of YAML in working with K8s
+  - OpenShift
+    - Explain the relationship between OpenShift and Kubernetes
+    - Login to oc locally using the UI to get the token
+    - Use `icc` to login to `oc` locally
+    - Describe projects and how they relate to kubernetes
+  - Tekton
+    - Write a `Task` and run it via a `TaskRun`
+    - Define `Task`, `TaskRun`, `Pipeline`, and `PipelineRun`
+    - Use the Task Catalog to run `Tasks`
+    - Use the Task Catalog to build a `Pipeline` that clones a Git repository and uses a Catalog Task on the cloned repository
+      - Use the Task Catalog to build a `Pipeline` that clones a Git repository, runs the tests, builds the production version, creates a Docker image, pushes the image to quay.io and uses Kustomize to configure Kubernetes
+    - Use the Task Catalog to build a `Pipeline` that clones a Git repository, runs the tests, builds the production version, creates a Docker image, pushes the image to quay.io and deploys the application
+    - Create a `Pipeline` that clones a Git repository, runs the tests, builds the production version, creates a Docker image, pushes the image to quay.io and deploys the application, that is triggered by a Git push to the repository
+  - Kustomize
+    - Use `kustomize build` to create a `manifests.yaml`
+  - CI
+    - Explain the relationship between OpenShift and Tekton
+    - Write a sequence diagram of CI
+    - Build a Tekton pipeline incrementally using tasks from the Tekton Catalog
+    - Navigate the Tekton documentation efficiently
+    - Use `tkn` to introspect the state of a `pipeline`, `pipelinerun`, etc
+    - Describe the role of GitOps in CI/CD
+  - CD
+    - Describe the difference between Continuous Delivery and Continuous Deployment
+    - Differentiate between Push-based and Pull-based GitOps models
+    - Sequence diagram CD with Git-Ops
+    - Set up an Argo project manually in the UI
+- Process
+  - XP
+    - Describe 2 techniques for pair programming
+    - Write a story given a wireframe
+    - Describe inceptions, including when they happen, and what happens in them
+    - Describe an IPM, including when it happens, and what happens in them
+    - Describe stand-ups, including when they happen, and what happens in them
+    - Describe retros, including when they happen, and what happens in them
+    - Explain what a backlog is and how it's managed including who mostly write stories
+    - Diagram the flow of a story (branches, story statuses, pipelines, QA environments...)
+    - Given a wireframe containing many features provide a value-driven, prioritized backlog
+    - Given a description of a client's approach to Agile, create a recommendation that is aligned with the Garage Method
+    - Given information about a team's project tracker, explain what is happening and how the team fixes it via the Garage Method

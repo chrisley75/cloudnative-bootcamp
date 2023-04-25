@@ -1,0 +1,20 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: download
+spec:
+  params:
+    - name: url
+      type: string
+  steps:
+    - name: get
+      image: alpine:3
+      script: |
+        wget $(params.url) -P target-folder
+    - name: print
+      image: alpine:3
+      script: |
+        cat target-folder/index.html
+  workspaces:
+    - name: target-folder
+      description: Target folder for the downloaded file

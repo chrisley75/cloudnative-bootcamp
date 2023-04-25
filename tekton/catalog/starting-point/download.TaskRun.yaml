@@ -1,0 +1,13 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  generateName: download-
+spec:
+  taskRef:
+    name: download
+  params:
+    - name: url
+      value: "www.google.com"
+  workspaces:
+    - name: target-folder
+      emptyDir: {}
